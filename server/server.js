@@ -1,4 +1,4 @@
-const port = process.env.PORT || 5000;
+const port = "https://jamboard-server.vercel.app/"
 const io = require("socket.io")(port, {
   cors: {
     origin: "https://jamboard-navy.vercel.app/",
