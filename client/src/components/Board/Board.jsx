@@ -8,7 +8,7 @@ const Board = ({ color }) => {
   let timeout;
 
   useEffect(() => {
-    const s = io("http://localhost:5000");
+    const s = io("https://jamboard-server.vercel.app/");
     setSocket(s);
     return () => {
       s.disconnect();
