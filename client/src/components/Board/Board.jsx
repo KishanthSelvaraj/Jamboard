@@ -8,7 +8,9 @@ const Board = ({ color }) => {
   let timeout;
 
   useEffect(() => {
-    const s = io("https://jamboard-server.vercel.app/");
+    const s = io("https://jamboard-server.vercel.app/", {
+  transports: ['websocket', 'polling']
+});
     setSocket(s);
     return () => {
       s.disconnect();
